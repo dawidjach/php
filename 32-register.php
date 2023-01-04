@@ -1,5 +1,5 @@
 <?php
-require_once( '../includes/functions.inc.php' );
+require_once( '_init.php' );
 $database = 'blog';
 require_once( '../includes/pdo-connect.inc.php' );
 
