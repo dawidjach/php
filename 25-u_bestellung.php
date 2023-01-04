@@ -31,6 +31,6 @@ if( !empty( $_POST ) ) {
 
 <p>Die Session-ID lautet: <?php echo session_id(); ?></p>
 
-<p><a href="u_abschluss.php">Weiter zur Eingabe persönlicher Daten</a> und dem Abschluss der Bestellung.</p>
+<p><a href="26-u_abschluss.php">Weiter zur Eingabe persönlicher Daten</a> und dem Abschluss der Bestellung.</p>
 
 <?php get_footer(true, false); ?>
