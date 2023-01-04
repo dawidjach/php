@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung 1 - Formular</title>
+</head>
+<body>
+    body {
+        border: none;
+    }
+
+    <h1>Übung 1 - Formular</h1><br>
+    <form action="09-formular-auswertung.php" method="post">
+
+        <h2>Bitte füllen Sie das Formular komplett aus</h2><br>
+
+        <h3>Persönliche Daten</h3>
+        <p>Vorname:<input type="text" name="vorname"></p>
+        <p>Nachname:<input type="text" name="nachname"></p>
+        <p>Wohnort:<input type="text" name="wohnort"></p>
+
+        <h3>Was wir wissen wollen</h3>
+        <p>
+            Wie wohnen Sie? 
+            <input type="radio" name="wohnen" value="einfamilienhaus">Einfamilienhaus
+            <input type="radio" name="wohnen" value="eigentumswohnung">Eigentumswohnung
+            <input type="radio" name="wohnen" value="mehrfamilienhaus">Mehrfamilienhaus
+        </p>
+        <p>Welche TV-Sendungen sehen Sie gern?
+            <input type="checkbox" name="sendung[]" value="dokumentation">Dokumentation
+            <input type="checkbox" name="sendung[]" value="nachrichten">Nachrichten
+            <input type="checkbox" name="sendung[]" value="spielfilme">Spielfilme
+            <input type="checkbox" name="sendung[]" value="sport">Sport
+        </p>
+
+        Haben Sie eine Nachricht für uns?
+        <textarea name="message" cols="35" rows="7"></textarea>
+        
+        <p>
+            <input type="submit" value="Daten speichern">
+            <input type="reset" value="Zurücksetzen">
+        </p>
+
+    </form>
+</body>
+</html>
