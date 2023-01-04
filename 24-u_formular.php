@@ -1,35 +1,60 @@
 <?php
-    
-    session_start();
-    require_once('functions.inc.php');
-    $args = array(
-        'Sessions',
-        NULL,
-        false,
-        'Sessions - Formular'
-    );
-    get_header(...$args);
-    
+session_start();
+require_once 'includes/functions.inc.php';
+$args = array(
+    'Bestellformular',
+    NULL,
+    true,
+    'Übung: Honigbestellung'
+);
+get_header(...$args);
 ?>
 
-<h3>Bitte geben Sie die Bestellmenge an (Einheit: 500-g-Glass):</h3>
+<p class="lead">Bitte geben Sie die Bestellmenge an (Einheit: 500-g-Glas)</p>
 
 <form action="25-u_bestellung.php" method="post">
-    <p>Akazienhonig <input type="number" name="akazien" min="1" max="15"></p>
-    <p>Heidehonig <input type="number" name="heide" min="1" max="15"></p>
-    <p>Kleehonig <input type="number" name="klee" min="1" max="15"></p>
-    <p>Tannenhonig <input type="number" name="tannen" min="1" max="15"></p>
+    
+    <table class="table">
+        <tr class="table-warning">
+            <th>Honig</th>
+            <th>Menge</th>
+        </tr>
 
-    <p><input type="submit" name="" value="Abschicken"></p>
+        <tr>
+            <td>Akazienhonig</td>
+            <td>
+                <input class="form-control" type="number" name="Akazienhonig">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Heidehonig</td>
+            <td>
+                <input class="form-control" type="number" name="Heidehonig">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Kleehonig</td>
+            <td>
+                <input class="form-control" type="number" name="Kleehonig">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Tannenhonig</td>
+            <td>
+                <input class="form-control" type="number" name="Tannenhonig">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Abschicken" class="btn btn-primary">
+            </td>
+        </tr>
+    </table>
+
 </form>
 
-<?php 
-    $_SESSION = array();
-    if(session_destroy()) {
-            echo '';
-        } else {
-            echo '';
-        }
-?>
-
-<?php get_footer(); ?>
+<?php get_footer(true,false); ?>
