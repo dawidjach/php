@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once( 'functions.inc.php' );
+require_once( '_init.php' );
 $database = 'blog';
 require_once( 'pdo-connect.inc.php' );
 
